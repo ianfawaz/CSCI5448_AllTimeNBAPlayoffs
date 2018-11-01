@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block team1 %}New Simulation{% endblock %}</h1>
+{% endblock %}
+{% block p %}
+  <p>{{ output }}</p>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="team1">team1</label>
+    <input name="team1" id="team1" value="{{ request.form['team1'] }}" required>
+    <label for="team2">team2</label>
+    <input name="team2" id="team2" value="{{ request.form['team2'] }}" required>
+    <input type="submit" value="Simulate">
+  </form>
+
+{% endblock %}
+

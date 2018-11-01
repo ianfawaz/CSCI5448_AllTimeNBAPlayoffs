@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block team1 %}Edit "{{ post['team1'] }}"{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="team1">team1</label>
+    <input name="team1" id="team1"
+      value="{{ request.form['team1'] or post['team1'] }}" required>
+    <label for="team2">team2</label>
+    <input name="team2" id="team2"
+      value="{{ request.form['team2'] or post['team2'] }}" required>
+    <input type="submit" value="Save">
+  </form>
+  <hr>
+  <form action="{{ url_for('app.delete', id=post['id']) }}" method="post">
+    <input class="danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete?');">
+  </form>
+{% endblock %}
