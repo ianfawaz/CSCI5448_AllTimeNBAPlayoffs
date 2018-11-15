@@ -12,10 +12,19 @@
     <label for="team2">team2</label>
     <input name="team2" id="team2"
       value="{{ request.form['team2'] or post['team2'] }}" required>
+    <label for="strat">strat</label>
+    <input name="strat" id="strat"
+      value="{{ request.form['strat'] or post['strat'] }}" required>
+
     <input type="submit" value="Save">
+
   </form>
   <hr>
+    <form action="{{ url_for('app.results', id=post['id']) }}" method="post">
+    <input type="submit" name = "rerun" value="Rerun Simulation">
+  </form>
   <form action="{{ url_for('app.delete', id=post['id']) }}" method="post">
     <input class="danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete?');">
   </form>
+
 {% endblock %}
