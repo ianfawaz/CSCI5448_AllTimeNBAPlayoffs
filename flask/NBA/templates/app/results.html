@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{{ output }}</h1>
-  	
-    	
+  <figure><h1>{{ output }}</h1></figure>
+  <figure><h1>{{ output2 }}</h1></figure>
+  <figure><h1>{{ output3 }}</h1></figure>
+  <form action="{{ url_for('app.results', id=post['id']) }}" method="post">
+    <input type="submit" name = "rerun" value="Rerun Simulation">
+
+    <input type="submit" name = "rerun" value="Next Simulation">
+  </form>
+
 	
 
 {% endblock %}
