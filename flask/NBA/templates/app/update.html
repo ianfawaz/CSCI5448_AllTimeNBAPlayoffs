@@ -18,10 +18,23 @@
     <label for="team4">team4</label>
     <input name="team4" id="team4"
       value="{{ request.form['team4'] or post['team4'] }}" required>
+    <label for="team5">team5</label>
+    <input name="team5" id="team5"
+      value="{{ request.form['team5'] or post['team5'] }}" required>
+    <label for="team6">team6</label>
+    <input name="team6" id="team6"
+      value="{{ request.form['team6'] or post['team6'] }}" required>
+    <label for="team7">team7</label>
+    <input name="team7" id="team7"
+      value="{{ request.form['team7'] or post['team7'] }}" required>
+    <label for="team8">team8</label>
+    <input name="team8" id="team8"
+      value="{{ request.form['team8'] or post['team8'] }}" required>
     <label for="strat">strat</label>
     <input name="strat" id="strat"
       value="{{ request.form['strat'] or post['strat'] }}" required>
-
+    <label for="multsim">Check for 50 simulations on each series, leave unchecked for single simulation</label>
+    <input name='multsim' value="{{ request.form['multsim'] or post['multsim'] }}">
     <input type="submit" value="Save">
 
   </form>

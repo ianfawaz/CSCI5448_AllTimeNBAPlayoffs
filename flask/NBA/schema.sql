@@ -15,6 +15,11 @@ CREATE TABLE post (
   team2 TEXT NOT NULL,
   team3 TEXT NOT NULL,
   team4 TEXT NOT NULL,
+  team5 TEXT NOT NULL,
+  team6 TEXT NOT NULL,
+  team7 TEXT NOT NULL,
+  team8 TEXT NOT NULL,
   strat TEXT NOT NULL,
+  multsim TEXT NOT NULL,
   FOREIGN KEY (author_id) REFERENCES user (id)
 );
